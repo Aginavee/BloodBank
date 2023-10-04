@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>@ViewBag.Title -Blood bank application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <style>
+        .navbar-custom {
+            color: red;
+            height: 100px;
+            font-size: 15px;
+            width: 100vw;
+    </style>
+  
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark navbar-custom">
+            <div style="text-decoration-color:red;" class="container">
+                @Html.ActionLink("BLOOD BANK", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1" style="font-size:15px;">
+                        <li>@Html.ActionLink("About Us", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Looking for Blood", "Look", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Want to Donate Blood", "Donate", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Register", "Register", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        @*<li>@Html.ActionLink("Admin", "Admin", "Admin", new { area = "" }, new { @class = "nav-link" })</li>*@
+                    </ul>
+                </div><ul><li style="list-style-type:none;font-size:20px;">@Html.ActionLink("Admin", "Admin", "Admin", new { area = "" }, new { @class = "nav-link" })</li></ul>
+        </div>
+        </nav>
+   
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="foot-con " style="width:100vw;">
+                @*<div class="auto-container sitemap">*@
+                <div class="row clearfix p-lg-4" style="background-color:black; color:whitesmoke;">
+                    <div class="col-md-3 col-sm-12 col-xs-12  wow bounceInLeft animated" style="visibility: visible;">
+                        <h3 class="text-left">Looking for Blood</h3>
+                        <ul style="line-height:165%">
+                            <li>Blood Availability</li>
+                            <li>Blood Bank Directory</li>
+                            <li>Thalassemia Request</li>
+                            <br />
+                            <img src="https://cdn-icons-png.flaticon.com/128/10892/10892869.png" />
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12  wow bounceInLeft animated" style="visibility: visible;">
+                        <h3 class="text-left">Want to Donate Blood</h3>
+                        <ul style="line-height:165%">
+                            <li>Blood Donation Camps</li>
+                            <li>Appointment for Blood Bank</li>
+                            <li>Donor Login</li>
+                            <li style="display: none;">Voluntary Donor Group</li>
+                            <li>About Blood Donation</li>
+                            <li>Register VBD Camp</li>
+                            <br />
+                            <img src="https://cdn-icons-png.flaticon.com/128/3304/3304622.png" />
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12  wow bounceInLeft animated" style="visibility: visible;">
+                        <h3 class="text-left">Blood Bank Login</h3>
+                        <ul style="line-height:165%">
+                            <li>Login</li>
+                            <li>Add your Blood Bank</li>
+                            <br />
+                            <img src="https://cdn-icons-png.flaticon.com/128/2069/2069788.png" />
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12  wow bounceInLeft animated" style="visibility: visible; ">
+                        <h3 class="text-left">About Us</h3>
+                        <ul style="line-height:165%">
+                            <li>About website</li>
+                            <li>Notifications</li>
+                            <li>Gallery</li>
+                            <li>Video Gallery</li>
+                            <li>Contact Us</li>
+                            <li>Mobile Apps</li>
+                            <br />
+                            <img src="https://cdn-icons-png.flaticon.com/128/1056/1056501.png" />
+                        </ul>
+                    </div>
+                    <br />
+                    <br />
+                    <div style="text-align:center;">
+                        <a href="#">Terms and Conditions | Privacy Policy | Accessibility Statement</a>
+                        LastUpdated=@DateTime.Now.Year
+                    </div>
+                </div>
+
+            </div>
+
+
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
+            &copy; @DateTime.Now.Year blood bank application
+        </footer>
+    </body>
+</html>

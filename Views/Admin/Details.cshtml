@@ -1,0 +1,109 @@
+﻿@model Bloodbankapp.Models.Register
+@{
+    Layout = null;
+}
+<p style="font-size: 30px; text-align: left; background-image: url(/image/img8.jpg); height: 200px; background-repeat: no-repeat;
+    background-size: cover;margin-top:10px;color:red; font-weight: bold;">
+    Accessing page for Admin
+</p>
+
+<h4 style="text-align:center;font-size:30px;">User registered details</h4>
+<div style="text-align:center;font-size:30px;">
+    <style>
+
+        .dl-horizontal dt {
+            float: left;
+            clear: left;
+            width: 120px;
+            text-align: right;
+            margin-left: 550px;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        .dl-horizontal dd {
+            margin-right: 550px;
+            margin-bottom: 0;
+        }
+    </style>
+
+    <dl class="dl-horizontal" style="border:dotted;border-color:red;">
+        <dt>@Html.DisplayNameFor(model => model.BankName):</dt>
+        <dd>@Html.DisplayFor(model => model.BankName)</dd>
+        <br />
+
+        <dt>@Html.DisplayNameFor(model => model.Email):</dt>
+        <dd>@Html.DisplayFor(model => model.Email)</dd>
+        <br />
+
+        <dt>@Html.DisplayNameFor(model => model.Mobile):</dt>
+        <dd>@Html.DisplayFor(model => model.Mobile)</dd>
+        <br />
+
+        <dt>@Html.DisplayNameFor(model => model.Address):</dt>
+        <dd>@Html.DisplayFor(model => model.Address)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.City):</dt>
+        <dd>@Html.DisplayFor(model => model.City)</dd>
+    </dl>
+
+</div>
+<p style="font-size:25px;text-align:center;">
+    @*@Html.ActionLink("Edit", "Edit", new { uid = Model.Id }) |*@
+    @Html.ActionLink("Back", "Userdetails")
+</p>
+<footer>
+    <div class="foot-con d-flex flex-wrap justify-content-center" style="width: 100vw;margin-top:50px;">
+        <div class="row clearfix p-lg-4 justify-content-around" style="background-color: black; color: whitesmoke; display: flex;gap:200px;">
+            <div class="col-md-3 col-sm-12 col-xs-12 text-center wow bounceInLeft animated" style="visibility: visible; margin-bottom: 20px;">
+                <h3 class="text-left">Looking for Blood</h3>
+                <ul style="line-height: 165%">
+                    <li>Blood Availability</li>
+                    <li>Blood Bank Directory</li>
+                    <li>Thalassemia Request</li>
+                </ul>
+                <img src="https://cdn-icons-png.flaticon.com/128/10892/10892869.png" />
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 text-center wow bounceInLeft animated" style="visibility: visible; margin-bottom: 20px;">
+                <h3 class="text-left">Want to Donate Blood</h3>
+                <ul style="line-height: 165%">
+                    <li>Blood Donation Camps</li>
+                    <li>Appointment for Blood Bank</li>
+                    <li>Donor Login</li>
+                    <li style="display: none;">Voluntary Donor Group</li>
+                    <li>About Blood Donation</li>
+                    <li>Register VBD Camp</li>
+                </ul>
+                <img src="https://cdn-icons-png.flaticon.com/128/3304/3304622.png" />
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 text-center wow bounceInLeft animated" style="visibility: visible; margin-bottom: 20px;">
+                <h3 class="text-left">Blood Bank Login</h3>
+                <ul style="line-height: 165%">
+                    <li>Login</li>
+                    <li>Add your Blood Bank</li>
+                </ul>
+                <img src="https://cdn-icons-png.flaticon.com/128/2069/2069788.png" />
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 text-center wow bounceInLeft animated" style="visibility: visible; margin-bottom: 20px;">
+                <h3 class="text-left">About Us</h3>
+                <ul style="line-height: 165%">
+                    <li>About website</li>
+                    <li>Notifications</li>
+                    <li>Gallery</li>
+                    <li>Video Gallery</li>
+                    <li>Contact Us</li>
+                    <li>Mobile Apps</li>
+                </ul>
+                <img src="https://cdn-icons-png.flaticon.com/128/1056/1056501.png" />
+            </div>
+        </div>
+        <div class="text-center" style="margin-top: 20px; text-align: center;">
+            <a href="#">Terms and Conditions | Privacy Policy | Accessibility Statement</a>
+            LastUpdated=@DateTime.Now.Year
+        </div>
+    </div>
+    <div class="text-center" style="margin-top: 20px; text-align: center;">
+        &copy; @DateTime.Now.Year blood bank application
+    </div>
+</footer>
+

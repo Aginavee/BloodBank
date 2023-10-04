@@ -1,0 +1,44 @@
+﻿@model  Bloodbankapp.Models.Register
+@{
+    ViewBag.Title = "Bloodavail";
+}
+<div class="mx-auto form" style="width: 630px; height: 700px; background-color: rgb(0, 255, 255); opacity: 0.8; margin-top: 10px; box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;">
+    <h2>BLOOD BANK REGISTER</h2>
+    <style>
+        .button {
+            margin-left: 230px;
+        }
+    </style>
+    @using (Html.BeginForm("Register", "Home", FormMethod.Post))
+    {
+        <div style="color:black;font-size:20px;">
+            <div class="p-3">
+                @Html.LabelFor(model => model.BankName)
+                @Html.TextBoxFor(model => model.BankName, new { id = "email", placeholder = "enter blood bank name", Class = "form-control" })
+                @Html.ValidationMessageFor(model => model.BankName, "", new { Class = "text-danger" })
+            </div>
+            <div class="p-3">
+                @Html.LabelFor(model => model.Email)
+                @Html.TextBoxFor(model => model.Email, new { id = "email", placeholder = "abc@gmail.com", Class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Email, "", new { Class = "text-danger" })
+            </div>
+            <div class="p-3">
+                @Html.LabelFor(model => model.Mobile)
+                @Html.TextBoxFor(model => model.Mobile, new { id = "mobile", placeholder = "", Class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Mobile, "", new { Class = "text-danger" })
+            </div>
+            <div class="p-3">
+                @Html.LabelFor(model => model.Address)
+                @Html.TextBoxFor(model => model.Address, new { id = "address", placeholder = "Street name/Apartment", Class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Address, "", new { Class = "text-danger" })
+            </div>
+            <div class="p-3">
+                @Html.LabelFor(model => model.City)
+                @Html.TextBoxFor(model => model.City, new { id = "city", placeholder = "City", Class = "form-control" })
+                @Html.ValidationMessageFor(model => model.City, "", new { Class = "text-danger" })
+            </div>
+            <div class="button">
+                <input type="submit" class="btn-outline-dark" value="Register" />
+            </div>
+        </div>}
+</div>

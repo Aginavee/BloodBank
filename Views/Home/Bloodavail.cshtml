@@ -1,0 +1,52 @@
+﻿@model  IEnumerable<Bloodbankapp.Models.Register>
+@{
+    ViewBag.Title = "Bloodavail";
+}
+
+<h2>Search</h2>
+<table class="table">
+    <tr class="btn-primary">
+        <th>
+            @Html.DisplayNameFor(model => model.BankName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+    </tr>
+
+    @foreach (Bloodbankapp.Models.Register item in Model)
+    {
+        <tr class="btn-info">
+
+            <td class="dot">
+                @Html.DisplayFor(modelItem => item.BankName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+        </tr>
+    }
+
+</table>
+<div> @Html.ActionLink("Back", "Look")</div>
+
+

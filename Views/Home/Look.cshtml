@@ -1,0 +1,27 @@
+﻿@model Bloodbankapp.Models.Look
+@{
+    ViewBag.Title = "Look";
+}
+@using (Html.BeginForm("Search", "Home", FormMethod.Post))
+{
+    <div class="page-header" style="background-color:red; text-align:center;font-size:25px">Blood Stock Availabaility</div>
+    <br />
+    <style>
+        .button {
+            margin-left: 230px;
+        }
+    </style>
+    <div class="mx-auto form" style="align-items:center; width:600px;color:black;margin-top:5px;font-size:20px; background-image:url( /image/img1.jpg);
+background-repeat:no-repeat;height:300px;background-size:cover;border-image:auto;text-align:center;">
+        <h3 style="text-align:center">SEARCH BLOOD BANK</h3><br />
+        <div class="p-3" style="font-size:25px;">
+            <label for="bloodgroup" style="color:black;" class="form-label">Blood Group</label><br />
+            @Html.DropDownList("Blood", new List<SelectListItem> { new SelectListItem { Text="Choose blood group",Value="Choose blood group"},
+          new SelectListItem {Text="A+",Value="A+"},new SelectListItem {Text="B+",Value="B+"},new SelectListItem {Text="A-",Value="A-"},
+       new SelectListItem {Text="B-",Value="B-"},new SelectListItem {Text="O+",Value="O+"},new SelectListItem {Text="AB+",Value="AB+"},
+       new SelectListItem {Text="AB-",Value="AB-"},new SelectListItem { Text="O-",Value="O-"}})<br />
+        </div>
+        <button type="submit" class="button">Search</button>
+    </div>
+}
+
